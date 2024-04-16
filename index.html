@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tag is a special HTML tag that provides information about a web page. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatable" content="IE=edge"> <!--this tag is used for windows 10-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--this meta tag is used to give the instruction taht how the dimension or other thing of the web page is look like -->
+    <title>Motion Cue</title>
+    
+    <!-- Favicon - it is used to give the icon to the title -->
+    <link rel="shortcut icon" href="image/favicon.ico">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- rel is the relationshio file -->
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            
+    <style>
+        
+    </style>
+      
+</head>
+<body>
+
+ 
+   </div> 
+   <header class="header">
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <div>
+                <h1 class="navbar-brand"></h1>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#my-works">Vision</a></li>
+                <li><a href="#contact-me">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="home-content" id="home-page">
+        <div class="name">
+            <h1>Motion Cue</h1>
+            <p>Gesture Based Navigation</p>
+        </div>
+        <div class="angle-down-icon">
+            <a href="#about"><i class="fas fa-angle-down"></i></a>
+        </div>
+    </div>
+</header>
+<section class="about-me" id="about">
+    <div class="container">
+        <div class="about-content">
+            <div>
+                <h1 class="about-heading">About Us.</h1>
+                <ul>
+
+                    <li>Gesture-based navigation system.
+                        </li>
+                    <li>Utilizes hand movements for intuitive control.
+                        </li>
+                    <li>Enhances user experience across applications.
+                        </li>
+                    <li>Reduces reliance on traditional input devices.
+                        </li>
+                    <li>Revolutionizes interactive computing.
+                        </li>
+                    <li>
+                        Simplifies navigation through digital content.</li>
+                <ul> 
+            </div>
+            <div class="left-content">
+                <div class="work-arrow">
+                    <div class="work-arrow-2">
+                        <p>
+                            <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="image/aboutus5.gif">
+        </div>
+    </div>
+</section>
+<section id="my-works">
+    <div class="portfolio">
+        <div class="proj-heading">
+            <h1>Vision</h1>
+        </div>
+        <div class="portfolio-content container">
+            <div class="proj-1">
+                <video  src="image/demovideo.mp4" muted controls ></video>
+                
+                
+            </div>
+
+            
+            <div class="more-work" >
+                <button class="btn btn-futuristic" onmouseover="changeColor()" style="background: linear-gradient(90deg, #4e54c8, #8f94fb, #4e54c8);
+                background-size: 200% 200%;
+                color: white;
+                border: none;
+                border-radius: 25px;
+                padding: 10px 25px;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                animation: gradient-animation 5s ease infinite;"
+                    
+                >
+                    <a href="http://localhost:8501" target="blank">Explore Now <iclass="fas fa-external-link-alt"></i></a>
+                </button>
+
+                </main>    
+            </div>
+        </div>
+    </div>
+</section>
+<div class="contact" id="contact-me">
+    <div class="container">
+        <div class="contact-content">
+            <h2>Contact Us.</h2>
+            <p class="mail">
+                Get in touch with Us <i class="fas fa-arrow-right"></i> motioncue@outlook.com
+            </p>
+            <p class="links">Or find us on:</p>
+            <a href="https://www.linkedin.com/in/aniket-kumar-3a1aa3231" target="blank"><i class="fab fa-linkedin">
+                    Linkedin</i></a>
+            <a href="https://www.instagram.com/ani_kashyap_035/" target="blank"><i class="fab fa-instagram"></i>
+                Instagram</a>
+        </div>
+    </div>
+</div>
+<!-- JAVASCRIPT -->
+<script src="app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            // checks if window is scrolled more than 500px, adds/removes solid class
+            if ($(this).scrollTop() > 550) {
+                $('.navbar').addClass('solid');
+                $('.back-to-top').addClass('visible');
+            } else {
+                $('.navbar').removeClass('solid');
+                $('.back-to-top').removeClass('visible');
+            }
+
+        });
+    });
+
+
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+<script>
+    function changeColor() {
+      var button = document.querySelector('.btn-futuristic');
+      var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); // Generates a random hex color
+      button.style.backgroundColor = randomColor;
+    }
+</script>
+  
+
+</body>
+</html>

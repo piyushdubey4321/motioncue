@@ -16,19 +16,19 @@ How to Use
 ----------
 1. Clone this repository to your local machine.
 
-git clone https://github.com/piyushdubey4321/motioncue.git
+   git clone https://github.com/piyushdubey4321/motioncue.git
 
 2. Navigate to the project directory.
 
-cd motioncue
+   cd motioncue
 
 3. Install the dependencies.
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4. Run the application.
 
-streamlit run mainfinal.py
+   streamlit run mainfinal.py
 
 5. Follow the on-screen instructions to upload your presentation and start hand gesture detection.
 
